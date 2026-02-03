@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine for Praveen</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.hidden { display: none; }
+
+.heart {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 8px;
+}
+
+.yes {
+  background: #e91e63;
+  color: white;
+}
+
+.no {
+  background: #f8bbd0;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.text-pink {
+  color: #e91e63;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="card" id="page1">
+  <div class="heart">❤️</div>
+  <p><b>Tap to open</b></p>
+  <button class="yes" onclick="openPage2()">Open</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="card hidden" id="page2">
+  <h3>Praveen,</h3>
+  <p>
+    Somewhere between our conversations and smiles,  
+    you quietly became my favorite part of the day.
+  </p>
+  <p>
+    Life feels a little warmer, happier, and better with you in it.
+  </p>
+  <p class="text-pink">Will you be my Valentine? 💖</p>
+
+  <button class="yes" onclick="openPage3()">Yes 💕</button>
+  <button class="no" onclick="alert('Hehe 😄 try again')">
+    Blushing already 😊
+  </button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="card hidden" id="page3">
+  <h3 class="text-pink">He said YES 💘</h3>
+  <p>And my heart is officially very happy 🥰</p>
+
+  <!-- Replace these image URLs with your own -->
+  <img src="image.png">
+
+  <p style="margin-top:10px;">
+    I ❤️ YOU<br>
+    I ❤️ YOU<br>
+    I ❤️ YOU
+  </p>
+
+  <p class="text-pink">
+    Happy Valentine’s Day, Praveen ❤️
+  </p>
+</div>
+
+<script>
+function openPage2() {
+  page1.classList.add("hidden");
+  page2.classList.remove("hidden");
+}
+
+function openPage3() {
+  page2.classList.add("hidden");
+  page3.classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
